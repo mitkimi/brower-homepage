@@ -2,6 +2,9 @@
   <el-container class='container'>
     <Setup @flushSites="loadSites" />
     <div class="box-card">
+      <div class="endui">
+        <img src="@/assets/endui.png" />
+      </div>
       <div slot="header" class="clearfix">
         <div class="input-with-select">
           <el-input
@@ -43,73 +46,39 @@ export default {
     if (!localStorage.sites) {
       const defaultSites = [
         {
-          key: 'tools',
-          title: '公司产品与工具',
-          sites: [
-            {
-              key: 1,
-              name: 'C端官网',
-              avatar: 'sitec.png',
-              link: 'https://www.gecacademy.cn/#/',
-              checked: true,
-            },
-            {
-              key: 2,
-              name: 'B端官网',
-              avatar: 'siteb.png',
-              link: 'http://vip.gecacademy.cn/#/',
-              checked: true,
-            },
-            {
-              key: 3,
-              name: 'TAPD',
-              avatar: 'tapd.png',
-              link: 'https://www.tapd.cn/22046981/prong/iterations',
-              checked: true,
-            },
-            {
-              key: 4,
-              name: '语雀',
-              avatar: 'yuque.png',
-              link: 'https://www.yuque.com/jisixueyuan',
-              checked: true,
-            },
-            {
-              key: 5,
-              name: '石墨文档',
-              avatar: 'shimo.png',
-              link: 'https://shimo.im/',
-              checked: true,
-            },
-          ],
-        },
-        {
           key: 'developer',
           title: '开发者/设计师',
           sites: [
             {
-              key: 7,
-              name: 'GITLAB',
-              avatar: 'gitlab.png',
-              link: 'http://gitlab.gecacademy.cn',
+              key: 11,
+              name: '语雀',
+              avatar: 'yuque.png',
+              link: 'https://www.yuque.com/',
               checked: true,
             },
             {
-              key: 8,
+              key: 12,
+              name: 'GITLAB',
+              avatar: 'gitlab.png',
+              link: 'https://gitlab.ipietech.com',
+              checked: true,
+            },
+            {
+              key: 13,
               name: 'GITHUB',
               avatar: 'github.png',
               link: 'https://github.com',
               checked: true,
             },
             {
-              key: 9,
+              key: 14,
               name: 'ICONFONT',
               avatar: 'iconfont.png',
               link: 'https://www.iconfont.cn/',
               checked: true,
             },
             {
-              key: 10,
+              key: 15,
               name: 'UNSPLASH',
               avatar: 'unsplash.png',
               link: 'https://unsplash.com/',
@@ -178,8 +147,8 @@ export default {
   }
   .box-card {
     width: 100%;
-    padding: 40px 0 40px 0;
-    margin-top: 180px;
+    padding: 0 0 40px 0;
+    margin-top: 100px;
   }
   .input-with-select {
     width: 600px;
@@ -187,6 +156,12 @@ export default {
   }
   .el-select {
     width: 100px;
+  }
+  .endui {
+    font-size: 48px;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 40px;
   }
 }
 @media (max-width: 768px) {
@@ -206,6 +181,12 @@ export default {
   }
   .el-select {
     width: 100px;
+  }
+  .endui {
+    font-size: 40px;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 20px;
   }
 }
 
